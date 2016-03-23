@@ -1,0 +1,5 @@
+build/phpab/*
+.idea
+vendor
+build/output/
+build/phar/*.phar

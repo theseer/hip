@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+namespace theseer\hip;
+
+if (!defined('HHVM_VERSION') && (version_compare(phpversion(), '5.6', 'lt'))) {
+    fwrite(
+        STDERR,
+        sprintf(
+            "hip requires PHP 5.6 or later; " .
+            "Upgrading to the latest version of PHP is highly recommended. (Version used: %s)\n\n",
+            phpversion()
+        )
+    );
+
+    die(1);
+}
+
+spl_autoload_register(
+  function ($class)
+  {
+      static $classes = NULL;
+
+      if ($classes === NULL) {
+          $classes = array(
+            ___CLASSLIST___
+          );
+      }
+
+      $class = strtolower($class);
+
+      if (isset($classes[$class])) {
+          require 'phar://hip.phar/' . $classes[$class];
+      }
+  }
+);
+
+\Phar::mapPhar('hip.phar');
+
+die((new Factory())->createCliRunner()->run(
+    new Request($_SERVER['argv'])
+));
+
+__HALT_COMPILER();

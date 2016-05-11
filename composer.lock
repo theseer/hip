@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cdf7972de96ebfd9c99636b1e041f29e",
-    "content-hash": "b2995d0f025804652703696764ab4f3a",
+    "hash": "4b664eaef0356e21bbdc4bb34c4d5e76",
+    "content-hash": "b00808e206a1c41f862950c6b95630b3",
     "packages": [
         {
             "name": "watoki/collections",
@@ -54,16 +54,16 @@
         },
         {
             "name": "watoki/dom",
-            "version": "v0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/watoki/dom.git",
-                "reference": "fd6e69a5bb9265b7a4dd3ac71dab85a718c6b18c"
+                "reference": "5316947c3a615c7afac9581c28bb44b495b14fc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/watoki/dom/zipball/fd6e69a5bb9265b7a4dd3ac71dab85a718c6b18c",
-                "reference": "fd6e69a5bb9265b7a4dd3ac71dab85a718c6b18c",
+                "url": "https://api.github.com/repos/watoki/dom/zipball/5316947c3a615c7afac9581c28bb44b495b14fc3",
+                "reference": "5316947c3a615c7afac9581c28bb44b495b14fc3",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
                 "parser",
                 "watoki"
             ],
-            "time": "2014-10-14 13:13:10"
+            "time": "2016-05-10 04:58:37"
         },
         {
             "name": "watoki/smokey",
@@ -147,7 +147,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "watoki/dom": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

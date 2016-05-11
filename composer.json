@@ -1,5 +1,5 @@
 {
     "require": {
-        "watoki/dom": "^0.1.0"
+        "watoki/dom": "dev-master#5316947c3a615c7afac9581c28bb44b495b14fc3"
     }
 }

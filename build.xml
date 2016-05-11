@@ -71,7 +71,7 @@
             <arg value="--basedir" />
             <arg path="${basedir}" />
             <arg path="${source}" />
-            <arg path="${basedir}/vendor" />
+            <arg path="${basedir}/vendor/*/*/src" />
         </exec>
 
         <chmod file="${basedir}/build/phar/hip-${version}.phar" perm="ugo+rx"/>
